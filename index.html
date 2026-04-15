@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi part form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>📝 Complete Your Profile</h1>
+
+        <div class="progress-container">
+            <div class="step-indicator">
+                <span>Step 1: Account</span>
+                <span>Step 2: Personal</span>
+                <span>Step 3: Preference</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+        </div>
+
+        <div class="step active" id="step-1">
+            <h3>🔐 Account Information</h3>
+            <div class="form-group">
+                <label for="">Email adreess *</label>
+                <input type="email" name="" id="email" placeholder="you@example.com">
+                <div class="error-message" id="email-error">Please Enter valid email</div>
+            </div>
+            <div class="form-group">
+                <label>Username *</label>
+                <input type="text" id="username" placeholder="Choose a username">
+                <div class="error-message" id="username-error">Username is required (min 3 characters)</div>
+            </div>
+            <div class="form-group">
+                <label>Password *</label>
+                <input type="password" id="password" placeholder="Create a password">
+                <div class="error-message" id="password-error">Password must be at least 6 characters</div>
+            </div>
+        </div>
+
+        <div class="step" id="step-2">
+            <h3>👤 Personal Information</h3>
+            <div class="form-group">
+                <label>Full Name *</label>
+                <input type="text" id="fullname" placeholder="John Doe">
+                <div class="error-message" id="fullname-error">Full name is required</div>
+            </div>
+            <div class="form-group">
+                <label>Age *</label>
+                <input type="number" id="age" placeholder="18+">
+                <div class="error-message" id="age-error">Age must be 18 or older</div>
+            </div>
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" id="phone" placeholder="Optional">
+            </div>
+        </div>
+
+        <div class="step" id="step-3">
+            <h3>🎨 Preferences</h3>
+            <div class="form-group">
+                <label>Favorite Color *</label>
+                <select id="color">
+                    <option value="">Select a color</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="red">Red</option>
+                    <option value="purple">Purple</option>
+                </select>
+                <div class="error-message" id="color-error">Please select a color</div>
+            </div>
+            <div class="form-group">
+                <label>Newsletter</label>
+                <select id="newsletter">
+                    <option value="yes">Yes, send me updates</option>
+                    <option value="no">No, thanks</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="btn-prev" id="prevBtn" style="display: none;">← Previous</button>
+            <button class="btn-next" id="nextBtn">Next →</button>
+        </div>
+
+        <!-- Reset Button -->
+        <button class="btn-reset" id="resetBtn">🗑️ Reset All Data</button>
+    </div>
+    <script src="app1.js"></script>
+</body>
+
+</html>
